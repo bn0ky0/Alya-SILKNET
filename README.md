@@ -82,7 +82,7 @@ On Windows, SILKNET stores:
 - The SQLite database and profile images under `%LOCALAPPDATA%\SILKNET`.
 - Appearance settings and logs under `%APPDATA%\SILKNET`.
 
-The database schema is upgraded in place with ordered migrations. It is not encrypted by SILKNET. Use **Settings â†’ Create backup** to save a ZIP containing the database and profile images. **Restore backup** replaces the open workspace after confirmation and creates a safety backup in the local data folder first. Appearance preferences remain in the separate configuration folder.
+The database schema is upgraded in place with ordered migrations. It is not encrypted by SILKNET. Use **Settings → Create backup** to save a ZIP containing the database and profile images. **Restore backup** replaces the open workspace after confirmation and creates a safety backup in the local data folder first. Appearance preferences remain in the separate configuration folder.
 
 For an isolated workspace during development, set `SILKNET_CONFIG_DIR` and `SILKNET_DATA_DIR` to directories you control before launching.
 
@@ -98,7 +98,7 @@ For an isolated workspace during development, set `SILKNET_CONFIG_DIR` and `SILK
 - If the app does not open, launch `python -m silknet` from the source directory to see startup errors, or check `%APPDATA%\SILKNET\logs\silknet.log`.
 - If launching the executable appears to do nothing, check whether Alya SILKNET is already open. A second launch activates the existing window and exits.
 - To diagnose a packaged build, run `scripts\build_windows.ps1 -Console` and read the traceback shown by the console executable.
-- If the database cannot be opened after an interrupted update, restore the latest ZIP backup from **Settings â†’ Restore backup**.
+- If the database cannot be opened after an interrupted update, restore the latest ZIP backup from **Settings → Restore backup**.
 - If a profile image does not appear after importing JSON on another device, restore from a ZIP backup instead; JSON does not embed the image file.
 - If Windows blocks the downloaded build, use the copied project folder from a trusted location and confirm the file came from the intended distributor.
 
