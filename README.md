@@ -30,7 +30,7 @@ Your investigation notebook got a graph upgrade. Keep records, map connections, 
 - **Import / export** — JSON workspaces and CSV entities, with validation and duplicate checks.
 - **Backup button** — ZIP backups include the SQLite database and profile images.
 
-## `> choose_your_skin`
+## `> choose_your_theme`
 
 Six appearances: **Dark**, **Light**, **Alya Pink**, **Dark Red**, **Dark Purple**, and **Dark Green**.
 
