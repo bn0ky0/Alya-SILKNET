@@ -138,7 +138,7 @@ MIT — see [`LICENSE`](LICENSE).
     <img
       src="buy-me-a-coffee.svg"
       alt="Support Alya SILKNET ☕"
-      width="500"
+      width="800"
     />
   </a>
 </p>
