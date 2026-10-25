@@ -135,7 +135,7 @@ MIT — see [`LICENSE`](LICENSE).
 
 <p align="center">
   <a href="https://ipn.eg/S/bnoky0/instapay/0GAUXB" target="_blank" rel="noopener noreferrer">
-    <img src="buy-me-a-coffee.svg" alt="Buy me a coffee" width="1000" />
+    <img src="buy-me-a-coffee.svg" alt="Buy me a coffee" width="700" />
   </a>
 </p>
 
