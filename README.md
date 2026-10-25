@@ -130,6 +130,20 @@ tests/                  tests
 
 MIT — see [`LICENSE`](LICENSE).
 
+
+<p align="center">
+  <a href="https://ipn.eg/S/bnoky0/instapay/0GAUXB"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img
+      src="buy-me-a-coffee.svg"
+      alt="Support Alya SILKNET ☕"
+      width="230"
+    />
+  </a>
+</p>
+
+
 <p align="center">
   <code>made for curious brains & suspiciously many tabs</code> 🌸
 </p>
