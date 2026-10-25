@@ -40,6 +40,13 @@ def is_newer(latest: str, current: str) -> bool:
     return version_key(latest) > version_key(current)
 
 
+def _release_version(tag: str) -> str:
+    match = _VERSION_PATTERN.search(tag)
+    if match is None:
+        raise ValueError("The latest release has no version tag.")
+    return match.group(1)
+
+
 def parse_release(payload: object, *, fallback_url: str = RELEASES_PAGE) -> ReleaseInfo:
     """Turn a GitHub release payload into :class:`ReleaseInfo`.
 
@@ -59,7 +66,7 @@ def parse_release(payload: object, *, fallback_url: str = RELEASES_PAGE) -> Rele
     notes = payload.get("body")
     published = payload.get("published_at")
     return ReleaseInfo(
-        version=tag.strip().lstrip("vV"),
+        version=_release_version(tag),
         url=url,
         notes=notes.strip() if isinstance(notes, str) else "",
         published_at=published if isinstance(published, str) else "",

@@ -20,7 +20,7 @@ def test_parse_release_reads_github_payload() -> None:
     release = parse_release(
         {
             "tag_name": "v0.2.0",
-            "html_url": "https://github.com/bn0ky0/alya-silknet/releases/tag/v0.2.0",
+            "html_url": "https://github.com/bn0ky0/Alya-SILKNET/releases/tag/v0.2.0",
             "body": "  Release notes.  ",
             "published_at": "2026-10-25T12:00:00Z",
         }
@@ -35,5 +35,13 @@ def test_parse_release_reads_github_payload() -> None:
 def test_parse_release_rejects_a_missing_version() -> None:
     with pytest.raises(ValueError, match="no version tag"):
         parse_release({"name": ""})
+    with pytest.raises(ValueError, match="no version tag"):
+        parse_release({"name": "Alya SILKNET"})
     with pytest.raises(ValueError, match="not a GitHub release"):
         parse_release([])
+
+
+def test_parse_release_uses_a_release_name_when_the_tag_is_missing() -> None:
+    release = parse_release({"name": "Alya SILKNET 0.3.0"})
+    assert release.version == "0.3.0"
+    assert release.url.endswith("/releases")
